@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+
+
+@layer components {
+
+    .dropdown-menu{
+        @apply  w-full text-green-500 text-base hover:text-green-400 text-center p-1 md:p-0 mt-2 md:mt-0 md:w-auto md:hover:bg-transparent
+    }
+    .popUpItem{
+        @apply hover:bg-zinc-50 text-lime-500 rounded-md hover:text-lime-500 p-1
+    }
+    
+    .alertWapper{
+        background: rgba(0, 0, 0, 0.575);
+    }
+}
+
+.asterisk::after {
+    color: #e32;
+    content: ' *';
+    display:inline;
+}
