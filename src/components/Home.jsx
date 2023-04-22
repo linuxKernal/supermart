@@ -41,6 +41,9 @@ export default function Home() {
                     })}
                 </div>
             </div>
+            <div className="bg-green-600 p-4">
+                <p className="text-white">© 2023 National Engineering College kovilpatti, Information Technology Inc. All rights reserved. </p>
+            </div>
         </>
     );
 }
