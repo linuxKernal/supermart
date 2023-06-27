@@ -36,16 +36,16 @@ function ViewProduct() {
                 </div>
             </div>
             {userText ? (
-                <div className="pt-10 flex justify-center p-1">
-                    <div className="h-72 w-96">
+                <div className="mx-auto w-8/12 max-w-max flex flex-wrap gap-2  mt-24 ">
+                    <div className="">
                         <img
-                            className="w-full h-full rounded-md"
+                            className="w-full max-w-[360px] h-full rounded-md"
                             src={userText.image}
                             alt=""
                         />
                     </div>
 
-                    <div className="p-5">
+                    <div className=" h-full">
                         <h2 className="text-3xl font-semibold capitalize mb-1">
                             {userText.title}
                         </h2>

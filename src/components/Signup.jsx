@@ -147,14 +147,14 @@ function Signup() {
                     className={
                         showOTP
                             ? "hidden"
-                            : "bg-white rounded-lg flex flex-col p-2 pb-10 shadow-md gap-5 items-center"
+                            : "bg-white my-20 rounded-lg flex w-11/12 sm:w-10/12 max-w-[690px] flex-col p-2 pb-10 shadow-md gap-5 items-center"
                     }
                 >
                     <h2 className="text-4xl text-sky-500 ml-3">
                         Register - New User
                     </h2>
-                    <div className="grid grid-cols-2 gap-5 w-full p-3">
-                        <span className="flex flex-col w-80">
+                    <div className="grid md:grid-cols-2 gap-5 p-3 w-full">
+                        <span className="signupcontainer">
                             <label
                                 className="asterisk text-lg text-gray-700"
                                 htmlFor="firstName"
@@ -170,7 +170,7 @@ function Signup() {
                                 id="firstName"
                             />
                         </span>
-                        <span className="flex flex-col w-80">
+                        <span className="signupcontainer">
                             <label
                                 className="asterisk text-lg text-gray-700"
                                 htmlFor="lastName"
@@ -187,7 +187,7 @@ function Signup() {
                             />
                         </span>
 
-                        <span className="flex flex-col w-80">
+                        <span className="signupcontainer">
                             <label
                                 className="asterisk text-lg text-gray-700"
                                 htmlFor="email"
@@ -203,7 +203,7 @@ function Signup() {
                                 id="email"
                             />
                         </span>
-                        <span className="flex flex-col w-80">
+                        <span className="signupcontainer">
                             <label className="asterisk text-lg text-gray-700">
                                 Gender
                             </label>
@@ -236,7 +236,7 @@ function Signup() {
                                 </span>
                             </div>
                         </span>
-                        <span className="flex flex-col w-80">
+                        <span className="signupcontainer">
                             <label
                                 className="asterisk text-lg text-gray-700"
                                 htmlFor="phone"
@@ -252,7 +252,7 @@ function Signup() {
                                 id="phone"
                             />
                         </span>
-                        <span className="flex flex-col w-80">
+                        <span className="signupcontainer">
                             <label
                                 className="asterisk text-lg text-gray-700"
                                 htmlFor="dateOfBrith"
@@ -268,7 +268,7 @@ function Signup() {
                                 id="dateOfBrith"
                             />
                         </span>
-                        <span className="flex flex-col w-80">
+                        <span className="signupcontainer">
                             <label
                                 className="asterisk text-lg text-gray-700"
                                 htmlFor="address"
@@ -284,7 +284,7 @@ function Signup() {
                                 id="address"
                             />
                         </span>
-                        <span className="flex flex-col w-80">
+                        <span className="signupcontainer">
                             <label
                                 className="text-lg text-gray-700"
                                 htmlFor="profile"
@@ -300,7 +300,7 @@ function Signup() {
                             />
                         </span>
 
-                        <span className="mt-2 col-span-2">
+                        <span className="mt-2">
                             <button className="text-lg bg-sky-500 text-white p-1 w-full rounded-md hover:bg-sky-600">
                                 Done
                             </button>

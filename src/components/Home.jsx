@@ -5,8 +5,9 @@ import { db } from "../../firebase.config";
 
 import { getDocs, collection, query } from "firebase/firestore";
 
-export default function Home() {
+export default function Home({search}) {
     const [userProducts, setUserProducts] = useState([]);
+
     async function getProductsView() {
         const q = await query(collection(db, "Products"));
         const querySnapshot = await getDocs(q);
@@ -15,7 +16,6 @@ export default function Home() {
             const data = doc.data();
             data["pid"] = doc.id;
             userItems.push(data);
-            console.log(data);
         });
         setUserProducts(userItems);
     }
@@ -31,7 +31,11 @@ export default function Home() {
                     Our Products
                 </h2>
                 <div className="p-3 flex flex-wrap gap-5">
-                    {userProducts.map((item) => {
+                    {userProducts.length > 0 &&  userProducts.filter((item) => {
+
+                        if( !search || item["title"].toLowerCase().includes(search.toLowerCase())) return true
+                        
+                    }).map(item=>{
                         return (
                             <Product
                                 key={Date.now() + item.title}
@@ -42,7 +46,10 @@ export default function Home() {
                 </div>
             </div>
             <div className="bg-green-600 p-4">
-                <p className="text-white">© 2023 National Engineering College kovilpatti, Information Technology Inc. All rights reserved. </p>
+                <p className="text-white">
+                    © 2023 National Engineering College kovilpatti, Information
+                    Technology Inc. All rights reserved.
+                </p>
             </div>
         </>
     );

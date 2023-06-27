@@ -79,13 +79,13 @@ function Login() {
     return (
         <>
             <div className="flex items-center justify-center min-h-[92.53vh] bg-gradient-to-r from-green-400 to-blue-500">
-                <div className="bg-white rounded-lg flex flex-col p-2 pb-10 shadow-md gap-5 items-center">
+                <div className="bg-white rounded-lg flex flex-col w-10/12 sm:w-96 p-2 pb-10 shadow-md gap-5 items-center">
                     <h2 className="text-4xl text-sky-500">Login</h2>
                     <form
                         onSubmit={handleSubmit}
                         className="flex flex-col gap-2 items-center w-full p-3"
                     >
-                        <span className="flex flex-col w-96">
+                        <span className="flex flex-col w-full">
                             <label
                                 className="text-lg text-gray-700"
                                 htmlFor="phone number"
@@ -119,7 +119,7 @@ function Login() {
                                 />
                             </span>
                         )}
-                        <span className="mt-2 w-96">
+                        <span className="mt-2 w-full">
                             <button className="text-lg bg-sky-500 text-white p-1 w-full rounded-md hover:bg-sky-600">
                                 Login
                             </button>

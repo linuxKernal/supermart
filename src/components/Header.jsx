@@ -8,7 +8,7 @@ function Header() {
                     <h2 className="text-5xl text-green-500 mb-2 font-semibold">
                         WallMart
                     </h2>
-                    <p className="text-lg text-zinc-800 drop-shadow-2xl">
+                    <p className="md:text-lg text-zinc-800 drop-shadow-2xl sm:text-md">
                         Discover something new every day We've got what you need
                         Where shopping is a pleasure Experience the joy of
                         shopping with us and discover something new every day!

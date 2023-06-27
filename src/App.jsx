@@ -1,3 +1,4 @@
+import { useState } from "react";
 import {Route, Routes } from "react-router-dom";
 import DashBoard from "./components/DashBoard";
 import Home from "./components/Home";
@@ -7,11 +8,12 @@ import Signup from "./components/Signup";
 import ViewProduct from "./components/ViewProduct";
 
 function App() {
+  const [search,setSearch] = useState("")
   return (
     <>
-        <Navbar />
+        <Navbar search={search} setSearch={setSearch}  />
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/" element={<Home search={search} />} />
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<Signup /> } />
           <Route path="/dashboard" element={<DashBoard /> } />

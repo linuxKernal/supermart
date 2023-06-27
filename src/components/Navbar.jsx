@@ -5,7 +5,7 @@ import webLogo from "../assets/google_logo.png";
 import searchIcon from "../assets/search.png";
 import { useState, useEffect } from "react";
 
-export default function Navbar() {
+export default function Navbar({search,setSearch}) {
     const [isOpen, setIsOpen] = useState(false);
     const [isPopUp, setIsPopUp] = useState(false);
     const [currentUserAuth, setCurrentUserAuth] = useState({});
@@ -71,6 +71,8 @@ export default function Navbar() {
                 <input
                     className="w-full bg-transparent outline-none text-lg p-1"
                     placeholder="Search"
+                    value={search}
+                    onChange={(e)=>setSearch(e.target.value)}
                     type="text"
                 />
                 <img className="w-8 h-8" src={searchIcon} alt="searchImage" />
@@ -78,7 +80,7 @@ export default function Navbar() {
             <div
                 className={`${
                     !isOpen && "hidden md:visible"
-                } text-white flex md:flex flex-col md:flex-row md:gap-5 items-center justify-center w-2/12`}
+                } text-white flex md:flex flex-col md:flex-row md:gap-5 items-center justify-center `}
             >
                 <span className="dropdown-menu">
                     <Link to="/">Home</Link>

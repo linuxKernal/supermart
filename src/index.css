@@ -17,6 +17,10 @@
     .alertWapper{
         background: rgba(0, 0, 0, 0.575);
     }
+
+    .signupcontainer{
+        @apply flex flex-col w-full;
+    }
 }
 
 .asterisk::after {
